@@ -1,0 +1,372 @@
+.selectButton {
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.selectButton svg {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform, opacity;
+  transition-duration: 0.3s, 0.3s;
+}
+
+.selectButton:hover svg,
+.selectButton:focus svg {
+  transform: scale(0.9);
+  opacity: 0.5;
+}
+
+.hiddenText {
+  position: absolute;
+  left: -10000vw;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.Cell {
+  --single-dur: 2s;
+  --double-dur: calc(2 * var(--single-dur));
+  --scale: 1.5;
+}
+
+.winSingle svg {
+  animation-iteration-count: infinite;
+  animation-duration: var(--single-dur);
+  animation-timing-function: linear;
+}
+
+.winDouble svg {
+  animation-iteration-count: infinite;
+  animation-duration: var(--double-dur);
+  animation-timing-function: linear;
+}
+
+.winSingle0 svg {
+  animation-name: SingleWin0;
+}
+
+.winSingle1 svg {
+  animation-name: SingleWin1;
+}
+
+.winSingle2 svg {
+  animation-name: SingleWin2;
+}
+
+.winDouble03 svg {
+  animation-name: DoubleWin03;
+}
+
+.winDouble04 svg {
+  animation-name: DoubleWin04;
+}
+
+.winDouble05 svg {
+  animation-name: DoubleWin05;
+}
+
+.winDouble13 svg {
+  animation-name: DoubleWin13;
+}
+
+.winDouble14 svg {
+  animation-name: DoubleWin14;
+}
+
+.winDouble15 svg {
+  animation-name: DoubleWin15;
+}
+
+.winDouble23 svg {
+  animation-name: DoubleWin23;
+}
+
+.winDouble24 svg {
+  animation-name: DoubleWin24;
+}
+
+.winDouble25 svg {
+  animation-name: DoubleWin25;
+}
+
+.winDouble0 svg {
+  animation-name: DoubleWin0;
+}
+
+.winDouble1 svg {
+  animation-name: DoubleWin1;
+}
+
+.winDouble2 svg {
+  animation-name: DoubleWin2;
+}
+
+.winDouble3 svg {
+  animation-name: DoubleWin3;
+}
+
+.winDouble4 svg {
+  animation-name: DoubleWin4;
+}
+
+.winDouble5 svg {
+  animation-name: DoubleWin5;
+}
+
+@keyframes SingleWin0 {
+  0%, 50%{
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(var(--scale));
+  }
+}
+
+@keyframes SingleWin1 {
+  25%, 75%{
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(var(--scale));
+  }
+}
+
+@keyframes SingleWin2 {
+  50%, 100%{
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(var(--scale));
+  }
+}
+
+/* Double wins */
+
+@keyframes DoubleWin0 {
+  0%, 25%{
+    transform: scale(1);
+  }
+
+  12.5% {
+    transform: scale(var(--scale));
+  }
+}
+
+@keyframes DoubleWin1 {
+  12.5%, 37.5%{
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(var(--scale));
+  }
+}
+
+@keyframes DoubleWin2 {
+  25%, 50%{
+    transform: scale(1);
+  }
+
+  37.5% {
+    transform: scale(var(--scale));
+  }
+}
+
+@keyframes DoubleWin3 {
+  50%, 75%{
+    transform: scale(1);
+  }
+
+  62.5% {
+    transform: scale(var(--scale));
+  }
+}
+
+@keyframes DoubleWin4 {
+  62.5%, 87.5%{
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(var(--scale));
+  }
+}
+
+@keyframes DoubleWin5 {
+  75%, 100% {
+    transform: scale(1);
+  }
+
+  87.5% {
+    transform: scale(var(--scale));
+  }
+}
+
+@keyframes DoubleWin03 {
+  0%, 25%{
+    transform: scale(1);
+  }
+
+  12.5% {
+    transform: scale(var(--scale));
+  }
+
+  50%, 75%{
+    transform: scale(1);
+  }
+
+  62.5% {
+    transform: scale(var(--scale));
+  }
+}
+
+@keyframes DoubleWin04 {
+  0%, 25%{
+    transform: scale(1);
+  }
+
+  12.5% {
+    transform: scale(var(--scale));
+  }
+
+  62.5%, 87.5%{
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(var(--scale));
+  }
+}
+
+@keyframes DoubleWin05 {
+  0%, 25%{
+    transform: scale(1);
+  }
+
+  12.5% {
+    transform: scale(var(--scale));
+  }
+
+  75%, 100% {
+    transform: scale(1);
+  }
+
+  87.5% {
+    transform: scale(var(--scale));
+  }
+}
+
+@keyframes DoubleWin13 {
+  12.5%, 37.5%{
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(var(--scale));
+  }
+
+  50%, 75%{
+    transform: scale(1);
+  }
+
+  62.5% {
+    transform: scale(var(--scale));
+  }
+}
+
+@keyframes DoubleWin14 {
+  12.5%, 37.5%{
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(var(--scale));
+  }
+
+  62.5%, 87.5%{
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(var(--scale));
+  }
+}
+
+@keyframes DoubleWin15 {
+  12.5%, 37.5%{
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(var(--scale));
+  }
+
+  75%, 100% {
+    transform: scale(1);
+  }
+
+  87.5% {
+    transform: scale(var(--scale));
+  }
+}
+
+@keyframes DoubleWin23 {
+  25%, 50%{
+    transform: scale(1);
+  }
+
+  37.5% {
+    transform: scale(var(--scale));
+  }
+
+  50%, 75%{
+    transform: scale(1);
+  }
+
+  62.5% {
+    transform: scale(var(--scale));
+  }
+}
+
+@keyframes DoubleWin24 {
+  25%, 50%{
+    transform: scale(1);
+  }
+
+  37.5% {
+    transform: scale(var(--scale));
+  }
+
+  62.5%, 87.5%{
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(var(--scale));
+  }
+}
+
+@keyframes DoubleWin25 {
+  25%, 50%{
+    transform: scale(1);
+  }
+
+  37.5% {
+    transform: scale(var(--scale));
+  }
+
+  75%, 100% {
+    transform: scale(1);
+  }
+
+  87.5% {
+    transform: scale(var(--scale));
+  }
+}

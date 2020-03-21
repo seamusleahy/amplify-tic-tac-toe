@@ -1,0 +1,125 @@
+.Grid {
+  fill: url(#header-shape-gradient) #727272;
+}
+
+.color0, .color50, .color100 {
+  transition: stop-color;
+  transition-duration: 0.5s;
+}
+
+.color0 {
+  stop-color: #727272;
+}
+
+.color50 {
+  stop-color: #727272;
+}
+
+.color100 {
+  stop-color: #727272;;
+}
+
+.oTurn .color0 {
+  stop-color: #AC3970;
+}
+
+.oTurn .color50 {
+  stop-color: #8F5671;
+}
+
+.oTurn .color100 {
+  stop-color: #727272;
+}
+
+.xTurn .color0 {
+  stop-color: #0BC1DA;
+}
+
+.xTurn .color50 {
+  stop-color: #3F9AA6;
+}
+
+.xTurn .color100 {
+  stop-color: #727272;
+}
+
+.oWins .color0,
+.oWins .color50,
+.oWins .color100,
+.xWins .color0,
+.xWins .color50,
+.xWins .color100 {
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+}
+
+.oWins .color0,
+.xWins .color0 {
+  animation-delay: -1.8s;
+}
+
+.oWins .color50,
+.xWins .color50 {
+  animation-delay: -1.2s;
+}
+
+.oWins .color100,
+.xWins .color100 {
+  animation-delay: -0.6s;
+}
+
+.oWins .color0,
+.oWins .color50,
+.oWins .color100 {
+  animation-name: OWins;
+}
+
+.xWins .color0,
+.xWins .color50,
+.xWins .color100 {
+  animation-name: XWins;
+}
+
+.oWins .color0 {
+  stop-color: #ffffff;
+}
+
+.oWins .color50 {
+  stop-color: #AC3970;
+}
+
+.oWins .color100 {
+  stop-color: #AC3970;
+}
+
+.xWins .color0 {
+  stop-color: #ffffff;
+}
+
+.xWins .color50 {
+  stop-color: #0BC1DA;
+}
+
+.xWins .color100 {
+  stop-color: #0BC1DA;
+}
+
+@keyframes OWins {
+  0%, 100% {
+    stop-color: #ffffff;
+  }
+
+  50% {
+    stop-color: #AC3970;
+  }
+}
+
+@keyframes XWins {
+  0%, 66.6666%, 100% {
+    stop-color: #ffffff;
+  }
+
+  33.333% {
+    stop-color: #0BC1DA;
+  }
+}

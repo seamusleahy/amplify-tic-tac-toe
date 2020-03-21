@@ -1,0 +1,24 @@
+.CurrentPlayerStatus {
+  font-weight: 900;
+  font-size: 50px;
+  text-align: right;
+  color: #fff;
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.3);
+
+  align-self: flex-end;
+  padding: 20px;
+  
+  transition: color 0.6s;
+}
+
+.oTurn {
+  color: #F53993;
+}
+
+.xTurn {
+  color: #47E8FE;
+}
+
+.observing {
+  color: #74FFCD;
+}

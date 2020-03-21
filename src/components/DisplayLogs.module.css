@@ -1,0 +1,57 @@
+.log {
+  padding: 5px 15px;
+  border-bottom: solid 1px #333333;
+}
+
+.log > summary {
+  margin-left: -10px;
+}
+
+.preformatted {
+  margin: 3px 5px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #1c1c1c;
+  color: #ffffff;
+}
+
+.type {
+  color: rgb(0, 226, 226);
+}
+
+.paramLeftSide {
+  color: rgb(198, 198, 255);
+}
+
+.paramRightSide {
+  color: rgb(255, 183, 157);
+}
+
+.bracket {
+
+}
+
+.vars {
+  color: rgb(252, 58, 252);
+}
+
+.queryName {
+  color: greenyellow;
+}
+
+.key {
+  color: rgb(109, 214, 255);
+}
+
+
+.stringValue {
+  color: greenyellow;
+}
+
+.booleanValue {
+  color: rgb(252, 58, 252);
+}
+
+.nullValue {
+  color: rgb(255, 161, 161);
+}

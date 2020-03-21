@@ -1,0 +1,17 @@
+.HomePage {
+  position: relative;
+  justify-content: center;
+}
+
+.contents {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+@media screen and (max-height: 636px) {
+  .contents {
+    position: relative;
+    padding-top: calc(20px + 258px);
+  }
+}

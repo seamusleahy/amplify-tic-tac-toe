@@ -1,0 +1,92 @@
+type SayHello {
+  gameId: String
+  name: String
+}
+
+type SayHelloBackLetsPlay {
+  gameId: String
+  playerXName: String
+}
+
+type SayHelloBackWatchGame {
+  gameId: String
+  playerXName: String
+  playerOName: String
+  turn: Int
+  startingPlayer: String
+  gameBoard: [String]
+}
+
+type TakeTurn {
+  gameId: String
+  gameBoard: [String]
+}
+
+type StartNewGame {
+  gameId: String
+  playerXName: String
+  playerOName: String
+  startingPlayer: String
+}
+
+type LeaveGame {
+  gameId: String
+  playerLeaving: String
+}
+
+type StopObserving {
+  gameId: String
+  name: String
+}
+
+type Query {
+  # Query is required by Amplify/AppSync
+  noop: SayHello
+}
+
+type Mutation {
+  sayHello(gameId: String!, name: String!): SayHello
+
+  sayHelloBackLetsPlay(gameId: String!, playerXName: String!): SayHelloBackLetsPlay
+
+  sayHelloBackWatchGame(
+    gameId: String!, 
+    playerXName: String!,
+    playerOName: String!,
+    turn: Int!,
+    startingPlayer: String!,
+    gameBoard: [String]!,
+  ): SayHelloBackWatchGame
+
+  takeTurn(gameId: String!, gameBoard: [String]!): TakeTurn
+
+  startNewGame(
+    gameId: String!,
+    playerXName: String!,
+    playerOName: String!,
+    startingPlayer: String!
+  ): StartNewGame
+}
+
+type Subscription {
+    subscribeSayHello(gameId: String!): SayHello
+    @aws_subscribe(mutations: ["sayHello"])
+
+    subscribeSayHelloBackLetsPlay(gameId: String!): SayHelloBackLetsPlay
+    @aws_subscribe(mutations: ["sayHelloBackLetsPlay"])
+
+    subscribeSayHelloBackWatchGame(gameId: String!): SayHelloBackWatchGame
+    @aws_subscribe(mutations: ["sayHelloBackWatchGame"])
+
+    subscribeTakeTurn(gameId: String!): TakeTurn
+    @aws_subscribe(mutations: ["takeTurn"])
+
+    subscribeStartNewGame(gameId: String!): StartNewGame
+    @aws_subscribe(mutations: ["startNewGame"])
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+    subscription: Subscription
+}
