@@ -1,0 +1,19 @@
+.reduxtools {
+  padding: 5px;
+}
+
+.button {
+  font-size: 18px;
+  font-weight: 900;
+  padding: 10px;
+  border-radius: 3px;
+  
+  background-color: #111111;
+  color: #ffffff;
+  border: 0;
+  cursor: pointer;
+}
+
+.link {
+  color: rgb(154, 143, 253);
+}

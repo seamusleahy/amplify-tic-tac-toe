@@ -1,0 +1,49 @@
+.header {
+  font-weight: bold;
+  font-size: 44px;
+
+  text-align: center;
+
+  color: #EC9A4E;
+
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.25);
+  margin: 1em 10px 20px;
+}
+
+.form {
+
+}
+
+.field {
+  width: 300px;
+  padding: 10px;
+  background: #EAFAF4;
+  box-shadow: 0px 0px 8px rgba(116, 255, 205, 0.67);
+  border: none;
+
+  text-align: center;
+  font-size: 34px;
+  font-weight: bold;
+
+  color: #05150F;
+  margin: 5px;
+  box-sizing: content-box;
+}
+
+.button {
+  padding: 10px 40px;
+  
+  background: #EC9A4E;
+  box-shadow: 0px 0px 8px rgba(250, 168, 92, 0.81);
+  border: none;
+
+  font-size: 34px;
+  font-weight: bold;
+
+  color: #FFFFFF;
+
+  text-shadow: 0px 0px 8px #E67C19;
+  margin: 5px;
+  box-sizing: content-box;
+  cursor: pointer;
+}

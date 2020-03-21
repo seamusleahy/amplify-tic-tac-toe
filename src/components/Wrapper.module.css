@@ -1,0 +1,101 @@
+:root {
+  --header-height: 80px;
+  --logo-height: 258px;
+}
+
+.Wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: stretch;
+  position: relative;
+}
+
+.main > * {
+  flex-grow: 1;
+  position: relative;
+}
+
+.main > .logo {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 0;
+}
+
+.main > .logoHome {
+  left: 50%;
+  top: calc(50% - var(--logo-height));
+  transform: translateX(-50%);
+}
+
+@media screen and (max-height: 636px) {
+  .main > .logoHome {
+    top: 20px;
+  }
+}
+
+.drawer {
+  background-color: #222;
+  color: #fff;
+  padding: 10px;
+  max-height: 45vh;
+  overflow: auto;
+}
+
+.bgOrangePink {
+  background: linear-gradient(
+    116.67deg,
+    #faa557 0%,
+    #f58c56 53.44%,
+    #f056a0 53.45%,
+    #e1496e 98.5%
+  );
+}
+
+.bgDark {
+  background: linear-gradient(116.67deg, #3a2f33 0%, #302831 98.5%);
+}
+
+.bgDarkGlow {
+  background: linear-gradient(116.67deg, #625056 0%, #443946 98.5%);
+}
+
+.bgRedError {
+  background: linear-gradient(116.67deg, #cc3358 0%, #481228 100.59%);
+}
+
+.bgDarkLoading {
+  background-size: 200% 200%, 100% 100%;
+  background-image: linear-gradient(
+      116.67deg,
+      transparent 25%,
+      #5b0542 50%,
+      transparent 50%,
+      transparent 75%,
+      #5b0542 100%
+    ),
+    linear-gradient(116.67deg, #3a2f33 0%, #302831 98.5%);
+  animation-name: Loading;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes Loading {
+  0% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}

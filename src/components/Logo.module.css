@@ -1,0 +1,32 @@
+.Logo {
+  width: 258px;
+  height: 258px;
+  position: relative;
+}
+
+.Logo svg {
+  width: 258px;
+  height: 258px;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity;
+  transition-duration: 0.4s;
+}
+
+.Logo .homeVersion {
+  opacity: 0;
+}
+
+.Logo .defaultVersion {
+  opacity: 1;
+}
+
+.Logo.home .defaultVersion {
+  opacity: 0;
+}
+
+.Logo.home .homeVersion {
+  opacity: 1;
+}

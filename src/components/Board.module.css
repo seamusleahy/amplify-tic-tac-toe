@@ -1,0 +1,78 @@
+.Board {
+  position: relative;
+  transform: rotate(13deg);
+  transform-origin: 50% 50%;
+  height: 80%;
+  width: 80%;
+  top: 10%;
+  left: 10%;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vw;
+  max-width: 550px;
+  max-height: 550px;
+}
+
+.grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.cell {
+  position: absolute;
+  width: 31.666666666666%;
+  height: 31.666666666666%;
+  box-sizing: border-box;
+  padding: 1%;
+}
+
+.cell0 {
+  top: 0;
+  left: 0;
+}
+
+.cell1 {
+  top: 0;
+  left: 34.16666666666666666%;
+}
+
+.cell2 {
+  top: 0;
+  left: 68.333333333333333333%;
+}
+
+.cell3 {
+  top: 34.16666666666666666%;
+  left: 0;
+}
+
+.cell4 {
+  top: 34.16666666666666666%;
+  left: 34.16666666666666666%;
+}
+
+.cell5 {
+  top: 34.16666666666666666%;
+  left: 68.333333333333333333%;
+}
+
+.cell6 {
+  top: 68.333333333333333333%;
+  left: 0;
+}
+
+.cell7 {
+  top: 68.333333333333333333%;
+  left: 34.16666666666666666%;
+}
+
+.cell8 {
+  top: 68.333333333333333333%;
+  left: 68.333333333333333333%;
+}
+

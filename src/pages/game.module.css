@@ -1,0 +1,22 @@
+.GamePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.status {
+  width: 100%;
+  margin-bottom: -50px;
+}
+
+.board {
+  position: relative;
+}
+
+.playAgain {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
