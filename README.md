@@ -29,7 +29,7 @@ The following is an overview instead of a detailed step-by-step tutorial.
 2. In the [GraphQL Schema](https://docs.aws.amazon.com/appsync/latest/devguide/graphql-overview.html), create matching mutations and [subscriptions](https://docs.aws.amazon.com/appsync/latest/devguide/real-time-data.html). The mutation needs the parameters to match the fields. The subscription parameters are the parameters you want to filter on from the mutation. In this case, we only want to receive messages for the same `gameId`.
     
     AppSync requires a Query type which is why there is a noop field for it.
-    **[amplify/backend/api/tictactoe](https://github.com/seamusleahy/amplify-tic-tac-toe/amplify/backend/api/tictactoe/schema.graphql)**
+    **[amplify/backend/api/tictactoe](https://github.com/seamusleahy/amplify-tic-tac-toe/tree/master/amplify/backend/api/tictactoe/schema.graphql)**
     ```graphql
     type SayHello {
       gameId: String
@@ -62,7 +62,7 @@ The following is an overview instead of a detailed step-by-step tutorial.
 
     *The following can also be [done via the UI in the AWS Console](https://aws.amazon.com/premiumsupport/knowledge-center/appsync-notify-subscribers-real-time/).*
 
-    Amplify lets you [provide additional CloudFormation files(https://github.com/aws-amplify/amplify-cli/issues/1002)] at [`/amplify/backend/api/<API_NAME>/stacks/CustomResources.json`](https://github.com/seamusleahy/amplify/backend/api/tictactoe/stacks/CustomResources.json).
+    Amplify lets you [provide additional CloudFormation files(https://github.com/aws-amplify/amplify-cli/issues/1002)] at [`/amplify/backend/api/<API_NAME>/stacks/CustomResources.json`](https://github.com/seamusleahy/amplify-tic-tac-toe/tree/master/amplify/backend/api/tictactoe/stacks/CustomResources.json).
 
     Add resources for the None/Local resolver and the request/response configurations for the mutations to the `"Resources"` section of `CustomResources.json`.
 
@@ -150,7 +150,7 @@ The following is an overview instead of a detailed step-by-step tutorial.
 
       Amplify creates an empty folder `resolvers` inside the API you created where you can add custom resolver mapping templates.
 
-      [**`amplify/backend/api/tictactoe/resolvers/Mutation.sayHello.req.vtl`**](https://github.com/seamusleahy/amplify/backend/api/tictactoe/resolvers/Mutation.sayHello.req.vtl)
+      [**`amplify/backend/api/tictactoe/resolvers/Mutation.sayHello.req.vtl`**](https://github.com/seamusleahy/amplify-tic-tac-toe/tree/master/amplify/backend/api/tictactoe/resolvers/Mutation.sayHello.req.vtl)
       ```vtl
       {
           "version": "2017-02-28",
@@ -160,7 +160,7 @@ The following is an overview instead of a detailed step-by-step tutorial.
 
       The `payload` value will be passed from the request to the response by AppSync.
 
-      [**`amplify/backend/api/tictactoe/resolvers/Mutation.sayHello.res.vtl`**](https://github.com/seamusleahy/amplify/backend/api/tictactoe/resolvers/Mutation.sayHello.res.vtl)
+      [**`amplify/backend/api/tictactoe/resolvers/Mutation.sayHello.res.vtl`**](https://github.com/seamusleahy/amplify-tic-tac-toe/tree/master/amplify/backend/api/tictactoe/resolvers/Mutation.sayHello.res.vtl)
       ```vtl
       {
           $util.toJson($context.result)
