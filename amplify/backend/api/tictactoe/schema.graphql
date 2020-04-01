@@ -29,11 +29,6 @@ type StartNewGame {
   startingPlayer: String
 }
 
-type LeaveGame {
-  gameId: String
-  playerLeaving: String
-}
-
 type StopObserving {
   gameId: String
   name: String

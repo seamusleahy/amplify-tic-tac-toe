@@ -38,13 +38,18 @@
 				"Type": "NONE"
 			}
 		},
-		"MutationSayHello": {
+		"SayHelloResolver": {
 			"Type": "AWS::AppSync::Resolver",
 			"Properties": {
 				"ApiId": {
 					"Ref": "AppSyncApiId"
 				},
-				"DataSourceName": "NoneDataSource",
+				"DataSourceName": {
+					"Fn::GetAtt": [
+						"NoneDataSource",
+						"Name"
+					]
+				},
 				"TypeName": "Mutation",
 				"FieldName": "sayHello",
 				"RequestMappingTemplateS3Location": {
@@ -75,13 +80,18 @@
 				}
 			}
 		},
-		"MutationSayHelloBackLetsPlay": {
+		"SayHelloBackLetsPlayResolver": {
 			"Type": "AWS::AppSync::Resolver",
 			"Properties": {
 				"ApiId": {
 					"Ref": "AppSyncApiId"
 				},
-				"DataSourceName": "NoneDataSource",
+				"DataSourceName": {
+					"Fn::GetAtt": [
+						"NoneDataSource",
+						"Name"
+					]
+				},
 				"TypeName": "Mutation",
 				"FieldName": "sayHelloBackLetsPlay",
 				"RequestMappingTemplateS3Location": {
@@ -112,13 +122,18 @@
 				}
 			}
 		},
-		"MutationSayHelloBackWatchGame": {
+		"SayHelloBackWatchGameResolver": {
 			"Type": "AWS::AppSync::Resolver",
 			"Properties": {
 				"ApiId": {
 					"Ref": "AppSyncApiId"
 				},
-				"DataSourceName": "NoneDataSource",
+				"DataSourceName": {
+					"Fn::GetAtt": [
+						"NoneDataSource",
+						"Name"
+					]
+				},
 				"TypeName": "Mutation",
 				"FieldName": "sayHelloBackWatchGame",
 				"RequestMappingTemplateS3Location": {
@@ -149,13 +164,18 @@
 				}
 			}
 		},
-		"MutationStartNewGame": {
+		"StartNewGameResolver": {
 			"Type": "AWS::AppSync::Resolver",
 			"Properties": {
 				"ApiId": {
 					"Ref": "AppSyncApiId"
 				},
-				"DataSourceName": "NoneDataSource",
+				"DataSourceName": {
+					"Fn::GetAtt": [
+						"NoneDataSource",
+						"Name"
+					]
+				},
 				"TypeName": "Mutation",
 				"FieldName": "startNewGame",
 				"RequestMappingTemplateS3Location": {
@@ -186,13 +206,18 @@
 				}
 			}
 		},
-		"MutationTakeTurn": {
+		"TakeTurnResolver": {
 			"Type": "AWS::AppSync::Resolver",
 			"Properties": {
 				"ApiId": {
 					"Ref": "AppSyncApiId"
 				},
-				"DataSourceName": "NoneDataSource",
+				"DataSourceName": {
+					"Fn::GetAtt": [
+						"NoneDataSource",
+						"Name"
+					]
+				},
 				"TypeName": "Mutation",
 				"FieldName": "takeTurn",
 				"RequestMappingTemplateS3Location": {

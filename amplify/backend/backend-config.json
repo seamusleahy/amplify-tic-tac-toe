@@ -9,7 +9,7 @@
 					"defaultAuthentication": {
 						"authenticationType": "API_KEY",
 						"apiKeyConfig": {
-							"description": "API key for people to play anonymous",
+							"description": "PubSub tic-tac-toe",
 							"apiKeyExpirationDays": "365"
 						}
 					}
